@@ -5,6 +5,7 @@ def app():
         st.header("Dev Data Science")
         st.subheader("I don’t know much about you yet! But I’d love to learn.Tell me a little about yourself—your interests, what you do, or anything else you'd like me to remember.😊")
     with col3:
+        st.image('./assets/images.jpg')
         st.markdown('''
 **My sexy office co-worker began to stiffen up again. That sprang life into my cock again. A naked Komal was more powerful than any aphrodisiac I could have ever taken. I flipped her over and held her by her divine waist. My hands almost encircled her entire waist.
 
