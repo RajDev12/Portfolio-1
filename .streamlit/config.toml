@@ -10,8 +10,3 @@ font = "sans-serif"
 headless = true
 port = 8501
 enableCORS = false
-
-
-#MainMenu {visilibility="hidden"}
-footer {visilibility="hidden"}
-#MainMenu {visilibility="hidden"}
