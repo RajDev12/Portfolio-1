@@ -5,5 +5,5 @@ def app():
         st.header("Dev Data Science")
         st.subheader("I don’t know much about you yet! But I’d love to learn.Tell me a little about yourself—your interests, what you do, or anything else you'd like me to remember.😊")
     with col3:
-        st.image('./assets/images.jpg')
+        # st.image('./assets/images.jpg')
 
