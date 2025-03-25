@@ -14,7 +14,6 @@ selected_menu=option_menu("",
             , orientation="horizontal",
             icons=[ ],
             default_index=0)
-col1,col2,col3= st.columns([1,0.3,1])
 if selected_menu=="Home":
     home.app()
 
