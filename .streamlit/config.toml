@@ -1,0 +1,17 @@
+[theme]
+primaryColor = "#6c757d"
+base="dark"
+backgroundColor="#5b8ef7"
+secondaryBackgroundColor = "#f0f0f0"
+textColor = "#212529"
+font = "sans-serif"
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
+
+#MainMenu {visilibility="hidden"}
+footer {visilibility="hidden"}
+#MainMenu {visilibility="hidden"}
