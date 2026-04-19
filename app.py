@@ -25,18 +25,18 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 /* ── NAV BAR ── */
 .topnav {
     display: flex; align-items: center; justify-content: center;
-    gap: 6px; flex-wrap: wrap;
+    gap: 10px; flex-wrap: wrap;
     background: #ffffff;
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: 14px 22px;
     margin-bottom: 28px;
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
     border: 1px solid #e2eaf4;
 }
 .nav-btn {
     background: transparent; border: none;
-    color: #3a5a8a; font-size: 0.82rem;
-    font-weight: 600; padding: 7px 16px;
+    color: #3a5a8a; font-size: 1.02rem;
+    font-weight: 700; padding: 10px 18px;
     border-radius: 30px; cursor: pointer;
     text-decoration: none; letter-spacing: 0.03em;
     transition: background 0.2s, color 0.2s;
@@ -52,9 +52,21 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     margin-bottom: 24px;
     display: flex; align-items: flex-start;
     justify-content: space-between;
-    gap: 32px; flex-wrap: wrap;
+    gap: 28px; flex-wrap: wrap;
 }
-.hero-left { flex: 1; min-width: 260px; }
+.hero-left { flex: 1.25; min-width: 260px; }
+.hero-center {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+.hero-right {
+    display: flex; flex-direction: column; gap: 12px;
+    min-width: 180px;
+    flex: 0.8;
+}
 .hero-name {
     font-size: 2.6rem; font-weight: 800;
     color: #ffffff; line-height: 1.1; margin: 0 0 8px 0;
@@ -68,16 +80,32 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .hlink {
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.18);
-    color: #ffffff !important; font-size: 0.82rem; font-weight: 600;
-    padding: 7px 18px; border-radius: 30px;
+    color: #ffffff !important; font-size: 0.84rem; font-weight: 700;
+    padding: 9px 18px; border-radius: 30px;
     text-decoration: none !important;
     transition: background 0.2s;
 }
 .hlink:hover { background: rgba(232,160,32,0.3); }
-.hero-right {
-    display: flex; flex-direction: column; gap: 12px;
-    min-width: 180px;
+
+.profile-frame {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    padding: 7px;
+    background: linear-gradient(135deg, #e8a020, #1a3a6b);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+}
+
 .stat-box {
     background: rgba(255,255,255,0.07);
     border: 1px solid rgba(255,255,255,0.12);
@@ -211,7 +239,7 @@ st.markdown("""
 
 
 # ══════════════════════════════════════════════
-# HERO — Name + Bio on left | Quick Links + Stats on right
+# HERO
 # ══════════════════════════════════════════════
 st.markdown("""
 <div class="hero-wrap">
@@ -233,6 +261,13 @@ st.markdown("""
             <a class="hlink" href="#">🌐 Portfolio</a>
         </div>
     </div>
+
+    <div class="hero-center">
+        <div class="profile-frame">
+            <img src="assets/profile.jpg" alt="Raju Devnath Profile Picture">
+        </div>
+    </div>
+
     <div class="hero-right">
         <div class="stat-box"><div class="stat-num">2,000+</div><div class="stat-lbl">Students Taught</div></div>
         <div class="stat-box"><div class="stat-num">700+</div><div class="stat-lbl">Offline Learners</div></div>
@@ -295,7 +330,6 @@ with c2:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-
 # ══════════════════════════════════════════════
 # SKILLS
 # ══════════════════════════════════════════════
@@ -326,7 +360,6 @@ for i, (icon, cat, items) in enumerate(skills):
         </div>""", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
-
 
 # ══════════════════════════════════════════════
 # EXPERIENCE
@@ -385,7 +418,6 @@ for e in exps:
     </div>""", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
-
 
 # ══════════════════════════════════════════════
 # PROJECTS
@@ -482,7 +514,6 @@ for i, p in enumerate(projects):
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-
 # ══════════════════════════════════════════════
 # INTRODUCTORY TEACHING VIDEOS
 # ══════════════════════════════════════════════
@@ -577,7 +608,6 @@ for i, v in enumerate(videos):
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-
 # ══════════════════════════════════════════════
 # TEACHING HIGHLIGHTS
 # ══════════════════════════════════════════════
@@ -609,7 +639,6 @@ with c2:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-
 # ══════════════════════════════════════════════
 # EDUCATION
 # ══════════════════════════════════════════════
@@ -640,7 +669,6 @@ st.markdown("""
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-
 # ══════════════════════════════════════════════
 # CERTIFICATIONS
 # ══════════════════════════════════════════════
@@ -665,7 +693,6 @@ for i, (icon, name, issuer, year, color) in enumerate(certs):
         </div>""", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
-
 
 # ══════════════════════════════════════════════
 # CONTACT
@@ -743,7 +770,6 @@ with c2:
     </div>
     """, unsafe_allow_html=True)
 
-
 # ══════════════════════════════════════════════
 # FOOTER
 # ══════════════════════════════════════════════
@@ -753,7 +779,6 @@ st.markdown("""
     <span style="font-size:0.75rem;">📍 Guwahati, India &nbsp;·&nbsp; 📧 rjnath98@gmail.com</span>
 </div>
 """, unsafe_allow_html=True)
-
 
 
 
