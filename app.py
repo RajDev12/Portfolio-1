@@ -270,7 +270,7 @@ st.markdown("""
 # ══════════════════════════════════════════════
 def get_profile_img_html():
     """Returns img tag with base64 data if profile.jpg/png exists, else placeholder."""
-    for fname in ["profile.jpg", "profile.jpeg", "profile.png", "photo.jpg", "photo.png"]:
+    for fname in ["profilepic.jpg", "profilepic.jpeg", "profilepic.png", "photopic.jpg", "photopic.png"]:
         fpath = os.path.join(os.path.dirname(__file__), fname)
         if os.path.exists(fpath):
             with open(fpath, "rb") as f:
